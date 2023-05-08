@@ -87,9 +87,9 @@ process intersectVcf {
     executor = 'float'
     image = 'bedtools'
     //extra = '--migratePolicy [enable=true]'
-    extra = '--migratePolicy [cpu.upperBoundRatio=80,cpu.lowerBoundRatio=10,cpu.upperBoundDuration=3s,cpu.lowerBoundDuration=30s,cpu.step=50,mem.upperBoundRatio=80,mem.lowerBoundRatio=10,mem.upperBoundDuration=3s,mem.lowerBoundDuration=30s,mem.step=50]'
-    cpu = 2
-    mem = 4
+//    extra = '--migratePolicy [cpu.upperBoundRatio=80,cpu.lowerBoundRatio=10,cpu.upperBoundDuration=3s,cpu.lowerBoundDuration=30s,cpu.step=50,mem.upperBoundRatio=80,mem.lowerBoundRatio=10,mem.upperBoundDuration=3s,mem.lowerBoundDuration=30s,mem.step=50]'
+    cpu = 8
+    mem = 32
 //    errorStrategy 'retry' 
     tag "${vcf}----${bed}"
     
